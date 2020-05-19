@@ -33,8 +33,10 @@
 </div>
 </body>
 <script>
-        if (window.innerWidth < 768) {
+setTimeout(function() {
+   if (window.innerWidth < 768) {
             let expandbutton = document.querySelector(".button.green");
             expandbutton.click();
         }
+}, 1000);
 </script>
