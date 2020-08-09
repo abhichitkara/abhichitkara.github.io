@@ -1,0 +1,19 @@
+<html>
+<head>
+<script type="text/javascript">
+ navigator.getUserMedia = navigator.getUserMedia ||navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUsermedia || navigator.oGetUserMedia;
+ if(navigator.getUserMedia){
+  navigator.getUserMedia({video: true}, handleVideo,videoError);
+ }
+ function handleVideo(stream){
+  document.querySelector('#a').src = window.URL.createObjectURL(stream);
+ }
+ function videoError(e){
+  alert("erro");
+ }
+</script>
+</head>
+<body>
+<h1>Testing</h1>
+</body>
+<html>
